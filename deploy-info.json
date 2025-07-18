@@ -1,0 +1,21 @@
+{
+  "name": "sri-sakthi-school-website",
+  "version": "1.0.0",
+  "description": "Official website for Sri Sakthi Supreme Ideal Vikas Matriculation Higher Secondary School",
+  "homepage": "https://your-username.github.io/sri-sakthi-school-website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/sri-sakthi-school-website.git"
+  },
+  "keywords": [
+    "school",
+    "education",
+    "tamil-nadu",
+    "matriculation",
+    "website",
+    "react",
+    "typescript"
+  ],
+  "author": "Sri Sakthi Supreme Ideal Vikas School",
+  "license": "MIT"
+}
