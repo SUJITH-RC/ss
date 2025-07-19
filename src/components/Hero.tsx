@@ -51,7 +51,8 @@ const Hero: React.FC = () => {
               className="w-full h-full bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/70"></div>
             </div>
           </div>
         ))}
@@ -61,32 +62,46 @@ const Hero: React.FC = () => {
       <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
         <div className="max-w-4xl">
           <div className="animate-fade-in">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight animate-slide-up">
-              Sri Sakthi Supreme
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 animate-glow">
-                Ideal Vikas
-              </span>
-              <span className="block text-3xl md:text-4xl lg:text-5xl font-heading">
-                Matriculation Higher Secondary School
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 font-body leading-relaxed animate-slide-up delay-200">
-              {slides[currentSlide].subtitle}
-            </p>
+            {/* Professional School Name */}
+            <div className="mb-8">
+              <h1 className="text-4xl md:text-6xl lg:text-8xl font-display font-bold leading-tight animate-slide-up">
+                <span className="block text-white drop-shadow-xl">
+                  Sri Sakthi Supreme
+                </span>
+                <span className="block text-blue-400 drop-shadow-xl text-5xl md:text-7xl lg:text-9xl font-black">
+                  Ideal Vikas
+                </span>
+                <span className="block text-gray-100 text-2xl md:text-3xl lg:text-4xl font-heading mt-2 drop-shadow-lg animate-fade-in-up delay-300">
+                  Matriculation Higher Secondary School
+                </span>
+              </h1>
+              
+              {/* Tamil Text */}
+              <p className="text-amber-300 text-lg md:text-xl font-accent mt-4 animate-slide-up delay-400 drop-shadow-md">
+                ஶ்ரீ சக்தி சுப்ரீம் ஐடியல் விகாஸ் மெட்ரிக் மேல்நிலைப் பள்ளி
+              </p>
+            </div>
+            
+            {/* Subtitle with Better Background */}
+            <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20 animate-slide-up delay-200">
+              <p className="text-xl md:text-3xl text-white font-body leading-relaxed animate-typing">
+                {slides[currentSlide].subtitle}
+              </p>
+            </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-slide-up delay-300">
+          <div className="flex flex-col sm:flex-row gap-6 mb-12 animate-slide-up delay-500">
             <button
               onClick={() => scrollToSection('admission')}
-              className="px-8 py-4 bg-gradient-to-r from-sky-600 to-blue-700 text-white rounded-full font-heading font-semibold text-lg hover:from-sky-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl animate-pulse-slow"
+              className="px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full font-heading font-bold text-lg hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl"
             >
-              Apply for Admission
+              🎓 Apply for Admission
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="px-8 py-4 border-2 border-white text-white rounded-full font-heading font-semibold text-lg hover:bg-white hover:text-gray-900 transform hover:scale-105 transition-all duration-300 animate-bounce-slow"
+              className="px-10 py-5 border-3 border-white bg-white/10 backdrop-blur-sm text-white rounded-full font-heading font-bold text-lg hover:bg-white hover:text-gray-900 transform hover:scale-105 transition-all duration-300 shadow-xl"
             >
-              Learn More
+              📚 Learn More
             </button>
           </div>
 

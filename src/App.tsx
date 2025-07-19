@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,14 +8,22 @@ import Gallery from './components/Gallery';
 import Stats from './components/Stats';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'about', 'admission', 'faculty', 'gallery', 'stats', 'contact'];
       const scrollPosition = window.scrollY + 100;
+
+      // Calculate scroll progress
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      setScrollProgress(scrolled);
 
       sections.forEach((section) => {
         const element = document.getElementById(section);
@@ -36,6 +44,14 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-50 to-blue-100">
+      {/* Scroll Progress Bar */}
+      <div className="scroll-progress">
+        <div 
+          className="scroll-progress-bar" 
+          style={{ width: `${scrollProgress}%` }}
+        ></div>
+      </div>
+      
       <Header activeSection={activeSection} />
       <main>
         <Hero />
@@ -47,6 +63,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
