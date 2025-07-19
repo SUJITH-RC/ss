@@ -30,8 +30,8 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg">
       <div className="container mx-auto px-4">
         {/* Top contact bar - hidden on desktop */}
-        <div className="md:hidden flex items-center justify-between py-1 border-b border-sky-100 flex-col text-center">
-          <div className="flex flex-col space-y-1 text-xs text-gray-600">
+        <div className="md:hidden py-2 border-b border-sky-100">
+          <div className="flex flex-col space-y-2 text-xs text-gray-600 text-center">
             <div className="flex items-center justify-center space-x-1">
               <Phone className="h-3 w-3 text-sky-600" />
               <span>99423 17555 | 94421 94845</span>
@@ -40,24 +40,24 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
               <Mail className="h-3 w-3 text-sky-600" />
               <span>sssivmhss@gmail.com</span>
             </div>
-          </div>
-          <div className="text-xs text-amber-600 font-medium mt-1">
-            🎓 Admission Open for PRE-KG to +1
+            <div className="text-xs text-amber-600 font-medium">
+              🎓 Admission Open for PRE-KG to +1
+            </div>
           </div>
         </div>
 
         {/* Main navigation */}
-        <div className="flex items-center justify-between py-2 flex-wrap">
-          <div className="flex items-center space-x-2 w-full md:w-auto">
-            <div className="w-8 h-8 bg-gradient-to-br from-sky-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-bold text-sm">S</span>
+        <div className="flex items-center justify-between py-3 md:py-4">
+          <div className="flex items-center space-x-3 min-w-0 flex-1 md:flex-initial">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-sky-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-bold text-lg md:text-xl">S</span>
             </div>
-            <div className="flex flex-col justify-center text-left">
-              <h1 className="text-sm md:text-lg font-bold text-gray-900 leading-tight">
+            <div className="flex flex-col justify-center text-left min-w-0">
+              <h1 className="text-sm md:text-lg font-bold text-gray-900 leading-tight truncate">
                 Sri Sakthi Supreme Ideal Vikas
               </h1>
-              <p className="text-xs text-gray-600">Matric Hr. Sec. School</p>
-              <p className="text-xs text-amber-600 font-medium hidden md:block">ஸ்ரீ சக்தி சுப்ரீம் ஐடியல் விகாஸ்</p>
+              <p className="text-xs text-gray-600 truncate">Matric Hr. Sec. School</p>
+              <p className="text-xs text-amber-600 font-medium hidden lg:block">ஸ்ரீ சக்தி சுப்ரீம் ஐடியல் விகாஸ்</p>
             </div>
           </div>
 
